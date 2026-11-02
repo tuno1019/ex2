@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;/*無襯字*/
+    font-size: 1.2rem;
+}
+
+::selection{
+    background: rgba(69, 9, 32, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+a{
+    text-decoration: none;
+    color: rgba(69, 9, 32, 1);
+    display: inline-block;
+}
+
+a:hover{
+    color: rgba(69, 9, 32, .5);
+}
+
+/*header*/
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 200000;
+}
+
+/*menu*/
+.menu{
+    width: 80%;
+    margin: auto;
+}
+
+/*logo*/
+.logo{
+    float: left;
+    width: 120px;
+    background: rgba(255, 255, 255, 1);
+}
+
+.logo img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+/*nav*/
+nav{
+    float: right;
+}
+
+nav a{
+    padding: 50px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+/*hero*/
+.hero{
+    position: relative;   
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+    object-fit:cover;
+}
+
+.hero h1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 150px;
+    color: rgba(69, 9, 32, 1);
+
+    opacity:0;
+    animation-name: ant;
+	animation-duration: 5s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+@keyframes ant{
+  from {
+    top:0%; /*動畫起始*/
+  }
+
+  to {
+    opacity:1;
+  }
+}
+
+.hero p{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: rgba(69, 9, 32, 1);
+}
+
+/*section*/
+section{
+    clear: both;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+section h1{
+    color:rgba(69, 9, 32, 1);
+    text-align: center;
+}
+
+/*card*/
+.card{
+	display:inline-block;
+	width:24.5%;
+	box-sizing:border-box;
+	padding:10px;
+	text-align:center;
+	cursor:pointer;
+}
+
+
+.card img{
+	width:80%;
+	border-radius:50%;
+	border:solid 1px rgba(69, 9, 32, .2);
+    
+	-ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Safari */
+    transform: rotate(0deg); /* Standard syntax */
+	
+	transition: transform 1.5s;
+	-webkit-transition: transform 1.5s;
+}
+
+.card:hover img{
+	-ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Safari */
+    transform: rotate(-20deg); /* Standard syntax */
+}
+
+
+/*article*/
+article{
+	width:100%;
+    height: 500px;
+	margin:auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+article:hover{
+	cursor:pointer;	
+}
+
+.a_left{
+    position: relative;
+	float:left;
+	width:50%;
+    height:100%;
+}
+
+.a_left img{
+	float:left;
+	width:100%;
+    height:100%;
+	object-fit:cover;
+}
+
+.moreb{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	
+	background:rgba(69, 9, 32, 1);
+	padding:30px;
+	color: rgba(255, 255, 255, 1);
+
+    opacity:0;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;/*前綴詞*/
+	
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;/* Safari */    
+
+}
+
+article:hover .moreb{
+	opacity:1;
+}
+
+.a_right{
+	float:left;
+	width:50%;
+    height:100%;
+	padding: 4%;
+	box-sizing:border-box;
+	background:rgba(255, 255, 255, 1);
+	color:rgba(69, 9, 32, 1);
+	text-align:left;
+    line-height: 2rem;
+
+    transition: color 0.5s, background 0.5s;
+	-webkit-transition: color 0.5s, background 0.5s; /*前綴詞*/
+	
+	transition-timing-function:linear;
+	-webkit-transition-timing-function: linear;/* Safari */
+}
+
+article:hover .a_right{
+	background:rgba(245, 234, 216, 1);
+    color:rgba(69, 9, 32, 1);
+}
+
+
+.a_right h2{
+    font-size: 2.5rem;
+}
+
+/*footer*/
+footer{
+    clear: both;
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+}
